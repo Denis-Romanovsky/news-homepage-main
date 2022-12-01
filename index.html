@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Homepage</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-mask"></div>
+    <header class="header">
+      <div class="container">
+        <nav class="navigation">
+          <img class="logo" src="/images/logo.svg" alt="Site logo" />
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Home</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">New</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Popular</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Trending</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Categories</a>
+            </li>
+          </ul>
+          <button class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <section class="hero">
+          <img class="hero__image" src="/images/image-web-3-mobile.jpg" alt="Main image" />
+          <img class="hero__image-big" src="/images/image-web-3-desktop.jpg" alt="Main image" />
+          <h1 class="hero__heading">The Bright Future of Web 3.0?</h1>
+          <p class="hero__paragraph">
+            We dive into the next evolution of the web that claims to put the power of the platforms
+            back into the hands of the people. But is it really fullfilling its promise?
+          </p>
+          <a href="#" class="hero__btn">READ MORE</a>
+        </section>
+
+        <section class="news">
+          <div class="news__header">New</div>
+          <div class="newsfeed">
+            <a class="newsfeed__heading" href="#">Hydrogen VS Electric Cars</a>
+            <p class="newsfeed__description">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <div class="newsfeed">
+            <a class="newsfeed__heading" href="#">The Downsides of AI Artistry</a>
+            <p class="newsfeed__description">
+              What are the possible adverse effects of on-demand AI image generation?
+            </p>
+          </div>
+          <div class="newsfeed">
+            <a class="newsfeed__heading" href="#">Is VC Funding Drying Up?</a>
+            <p class="newsfeed__description">
+              Private funding by VC firms is down 50% YOY. We take a look at what that means
+            </p>
+          </div>
+        </section>
+
+        <section class="articles">
+          <div class="article">
+            <img src="/images/image-retro-pcs.jpg" alt="" class="article__image" />
+            <span class="article__number">01</span>
+            <a class="article__heading" href="#">Reviving Retro PCs</a>
+            <div class="article__paragraph">
+              What happens when old PCs are given modern upgrades?
+            </div>
+          </div>
+          <div class="article">
+            <img src="/images/image-top-laptops.jpg" alt="" class="article__image" />
+            <span class="article__number">02</span>
+            <a class="article__heading" href="#">Top 10 Laptops of 2022</a>
+            <div class="article__paragraph">Our best picks for various need and budgets.</div>
+          </div>
+          <div class="article">
+            <img src="/images/image-gaming-growth.jpg" alt="" class="article__image" />
+            <span class="article__number">03</span>
+            <a class="article__heading" href="#">The Growth of Gaming</a>
+            <div class="article__paragraph">How the pandemic has sparked fresh opportunities.</div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+// Primary Colors
+$clr-primary-600: hsl(35, 77%, 62%);
+$clr-primary-400: hsl(5, 85%, 63%);
+
+// Neutral Colors
+$clr-neutral-100: hsl(36, 100%, 99%);
+$clr-neutral-300: hsl(233, 8%, 79%);
+$clr-neutral-700: hsl(236, 13%, 42%);
+$clr-neutral-900: hsl(240, 100%, 5%);
+
+
+// Typography
+$ff-base: 'Inter', sans-serif;
+$fs-base: 0.9375rem; // 15px (paragraph)
+
+$fw-regular: 400;
+$fw-semi-bold: 700;
+$fw-bold: 800;
+
+
+$fs-400: 0.875rem; // 14px
+$fs-450: 0.9375rem; // 15px
+$fs-500: 1rem;
+$fs-550: 1.125rem; // 18px
+$fs-600: 1.25rem; // 20px
+$fs-700: 1.5rem; // 24px
+$fs-800: 1.875rem; // 30px
+$fs-900: 2.25rem; // 36px

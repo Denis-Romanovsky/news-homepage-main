@@ -1,0 +1,27 @@
+.hamburger {
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &.active .bar {
+    &:nth-child(2) { opacity: 0; }
+    &:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    &:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  }
+
+  z-index: 100;
+
+  @media only screen and (min-width: 37.5em) {
+    display: none; }
+}
+
+.bar {
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
