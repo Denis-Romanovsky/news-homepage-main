@@ -33,11 +33,17 @@
     background-color: $clr-neutral-100;
     width: 100%;
     padding: 2rem 1.5rem;
-    transition: 0.3s;
 
-    &.active {
-      right: -31%;
-      z-index: 50;
+    &[data-state="opened"] {
+      animation: menuToggleOpen 300ms forwards;
+    }
+
+    &[data-state="closing"] {
+      animation: menuToggleClose 300ms forwards;
+    }
+
+    &[data-state="closed"] {
+      display: none;
     }
   }
 
@@ -63,6 +69,7 @@
   }
 }
 
+
 // 600px - 37.5em, 700px - 43.75em
 @media only screen and (min-width: 37.5em) {
   .navigation {
@@ -73,6 +80,10 @@
       height: auto;
       padding: 0;
       width: auto;
+
+      &[data-state="closed"] {
+        display: flex;
+      }
     }
 
     &__item {

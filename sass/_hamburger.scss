@@ -1,13 +1,18 @@
-.hamburger {
+.menu-toggle {
   display: block;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  padding: .75rem .5rem;
 
-  &.active .bar {
-    &:nth-child(2) { opacity: 0; }
-    &:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    &:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  // Makes the button stay in place when scrolling the page
+  &[aria-expanded="true"]{
+    position: fixed;
+    right: 1rem;
+
+    @media only screen and (min-width: 34.375em) {
+      right: 3.5rem;
+    }
   }
 
   z-index: 100;
@@ -16,12 +21,34 @@
     display: none; }
 }
 
-.bar {
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
   display: block;
-  width: 40px;
+  background: #101010;
   height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  width: 2.5rem;
+  transition: all ease-in-out 250ms;
+}
+
+.hamburger::before {
+  transform: translateY(-12px); // 6px
+}
+
+.hamburger::after {
+  transform: translateY(8px); // 3px
+}
+
+[aria-expanded="true"] .hamburger {
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .hamburger::before {
+  opacity: 0;
+}
+
+[aria-expanded="true"] .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
 }

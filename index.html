@@ -20,7 +20,15 @@
       <div class="container">
         <nav class="navigation">
           <img class="logo" src="/images/logo.svg" alt="Site logo" />
-          <ul class="navigation__list">
+          <button
+            class="menu-toggle"
+            aria-label="Menu"
+            aria-controls="navigation__list"
+            aria-expanded="false"
+          >
+            <span class="hamburger" aria-hidden="true"></span>
+          </button>
+          <ul data-state="closed" class="navigation__list">
             <li class="navigation__item">
               <a class="navigation__link" href="#">Home</a>
             </li>
@@ -37,11 +45,6 @@
               <a class="navigation__link" href="#">Categories</a>
             </li>
           </ul>
-          <button class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
         </nav>
       </div>
     </header>

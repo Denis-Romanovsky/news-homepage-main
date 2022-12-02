@@ -1,30 +1,39 @@
-const hamburger = document.querySelector('.hamburger');
+const menuToggle = document.querySelector('.menu-toggle');
 const navigationList = document.querySelector('.navigation__list');
 const pageMask = document.querySelector('.page-mask');
 const navigationLink = document.querySelectorAll('.navigation__link');
 
-hamburger.addEventListener('click', openMenu);
+menuToggle.addEventListener('click', () => {
+  const isOpened = menuToggle.getAttribute('aria-expanded') === 'true';
+  if (isOpened ? closeMenu() : openMenu());
+});
 
 document.addEventListener('click', e => {
-  if (hamburger.classList.contains('active') && e.target === pageMask
+  if (menuToggle.getAttribute('aria-expanded') === 'true' && e.target === pageMask
   ) return closeMenu();
 });
 
 navigationLink.forEach(link => link.addEventListener('click', closeMenu));
 
 function openMenu() {
-  hamburger.classList.toggle('active');
-  navigationList.classList.toggle('active');
+  menuToggle.setAttribute('aria-expanded', 'true');
+  navigationList.setAttribute('data-state', 'opened');
   pageMask.classList.toggle('active');
 }
 
 function closeMenu() {
-  hamburger.classList.remove('active');
-  navigationList.classList.remove('active');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  navigationList.setAttribute('data-state', 'closing');
   pageMask.classList.remove('active');
+
+  navigationList.addEventListener('animationend', () => {
+    navigationList.setAttribute('data-state', 'closed');
+  }, { once: true });
 }
 
-// Stop animations durin window resizing
+
+
+// Stop animations during window resizing
 let resizeTimer;
 window.addEventListener("resize", () => {
   document.body.classList.add("resize-animation-stopper");
